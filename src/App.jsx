@@ -1,16 +1,12 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import Home from './components/Home'
-import NavBar from './helping_components/NavBar'
-import MobNavBar from './helping_components/Mob_NavBar'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <MobNavBar />
-      <Home />
+      <AppRoutes />
     </>
   )
 }
