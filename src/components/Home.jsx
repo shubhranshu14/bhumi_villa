@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/components_styles/home_style.module.css";
 
 import clsx from "clsx";
 import EmblaCarousel from "../helping_components/embla_carousel/EmblaCarousel";
 
 import { Bathtub, KingBed, Villa } from "@mui/icons-material";
-import { Properties } from "../_mock/_properties";
+import { properties } from "../_mock/_properties";
 import { Reviews } from "../_mock/_review";
-import Footer from "../helping_components/Footer";
 
 import { Rating } from "@mui/material";
 import heroImage from "../assets/hero_Image.png";
 import stars from "../assets/Abstract_Design_Star.png";
+import { useNavigate } from "react-router";
 
 
 
 export default function Home() {
 
+    const navigate = useNavigate();
+
+    const [featuredProperties, setFeaturedProperties] = useState([]);
 
     const iconsMap = {
         kingbed: KingBed,
@@ -25,6 +28,15 @@ export default function Home() {
     };
 
     const OPTIONS = {}
+
+    const handleNavigate = (property_id) => {
+        navigate(`/property/${property_id}`);
+    }
+
+    useEffect(() => {
+        const filteredList = properties.filter((property) => property.featured)
+        setFeaturedProperties(filteredList);
+    }, [])
 
     return (
         <div className={styles.home_container}>
@@ -35,7 +47,7 @@ export default function Home() {
                 <div className={styles.hero_info}>
                     <div className={styles.hero_text_container}>
                         <h1 className={styles.hero_text_heading}>
-                            Discover Your Dream Property with Estatein
+                            Discover Your Dream Property with Bhumi
                         </h1>
                         <p className={styles.hero_text_paragraph}>
                             Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.
@@ -82,14 +94,14 @@ export default function Home() {
                             Featured Properties
                         </h1>
                         <p className={styles.featured_text_paragraph}>
-                            Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein.
+                            Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Bhumi.
                         </p>
 
                     </div>
                 </div>
                 <EmblaCarousel options={OPTIONS}>
-                    {Properties.map((property, index) => (
-                        <div className={clsx(styles.property_card, 'embla__slide')} key={index}>
+                    {featuredProperties.map((property) => (
+                        <div className={clsx(styles.property_card, 'embla__slide')} key={property.id}>
                             <div className={styles.property_image_container}>
                                 <img className={styles.property_image} src={property.image} alt="property image" />
 
@@ -100,7 +112,7 @@ export default function Home() {
                                     {property.name}
                                 </h1>
                                 <p className={styles.property_text_paragraph}>
-                                    {property.discription}
+                                    {property.description}
                                 </p>
 
                             </div>
@@ -117,7 +129,7 @@ export default function Home() {
 
                             </div>
 
-                            <button className={styles.property_view_btn}>View Property Details</button>
+                            <button className={styles.property_view_btn} onClick={() => handleNavigate(property.id)}>View Property Details</button>
 
                         </div>
                     ))}
@@ -135,7 +147,7 @@ export default function Home() {
                             What Our Clients Say
                         </h1>
                         <p className={styles.featured_text_paragraph}>
-                            Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.
+                            Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Bhumi for their real estate needs.
                         </p>
 
                     </div>

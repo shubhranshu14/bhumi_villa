@@ -4,7 +4,7 @@ import styles from '../styles/helping_components_styles/footer_style.module.css'
 import { FacebookRounded, Instagram, Send, X, YouTube } from '@mui/icons-material'
 import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from "@mui/material";
 
-import logo from '../assets/Logo_dark.png';
+import logo from '../assets/bhumi_logo.jpg';
 
 export default function Footer() {
     return (
@@ -15,7 +15,7 @@ export default function Footer() {
                         Start Your Real Estate Journey Today
                     </h1>
                     <p className={styles.footer_first_text_paragraph}>
-                        Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
+                        Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Bhumi is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
                     </p>
                 </div>
                 <button className={styles.footer_first_btn}>Explore Properties</button>
@@ -102,7 +102,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.terms_conditions_container}>
-                    <p>@2023 Estatein. All Rights Reserved.</p>
+                    <p>@2025 Bhumi. All Rights Reserved.</p>
                     <a href='#'>Terms & Conditions</a>
                 </div>
 

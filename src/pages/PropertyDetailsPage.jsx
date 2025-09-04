@@ -1,30 +1,23 @@
 import React, { useEffect } from 'react'
-import { useMediaQuery } from 'react-responsive'
-
-import NavBar from '../helping_components/NavBar'
 import MobNavBar from '../helping_components/Mob_NavBar'
-import AboutUs from '../components/AboutUs'
+import PropertyDetails from '../components/PropertyDetails'
 import Footer from '../helping_components/Footer'
+import { useMediaQuery } from 'react-responsive'
+import NavBar from '../helping_components/NavBar'
 
-
-
-
-export default function AboutUsPage() {
+export default function PropertyDetailsPage() {
 
     const isDesktop = useMediaQuery({ minWidth: 1080 })
 
     useEffect(() => {
-        document.title = "Bhumi | About Us"
+        document.title = "Bhumi | Property Details"
     }, [])
 
     return (
         <>
             {isDesktop ? <NavBar /> : <MobNavBar />}
-            <AboutUs />
+            <PropertyDetails />
             <Footer />
         </>
     )
 }
-
-
-

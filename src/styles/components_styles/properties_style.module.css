@@ -1,0 +1,123 @@
+.container {
+  padding: 0 10px;
+  min-height: 100vh;
+}
+
+/* hero_container */
+
+.hero_container {
+  padding: 50px 10px;
+  max-width: 1620px !important;
+  margin-top: 0 !important;
+  background: linear-gradient(145deg, #fff 0%, #f2f2f2 40%);
+}
+
+/* featured_container */
+
+.featured_container {
+  margin-top: 40px;
+  max-width: 1280px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.abstract_container {
+  width: 40px;
+}
+.abstract_star_image {
+  width: 100%;
+}
+.featured_sub_container {
+  margin-top: 10px;
+}
+
+.featured_text_heading {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.featured_text_paragraph {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #9a9a9a;
+  text-align: justify;
+}
+
+.property_card {
+  padding: 24px;
+  max-width: 413px;
+  box-shadow: 0 0 10px #dadada;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+.property_image {
+  width: 100%;
+}
+
+.property_text_container {
+  margin-top: 16px;
+}
+.property_text_heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+.property_text_paragraph {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+  color: #9a9a9a;
+}
+
+.property_highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.property_highlight {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 14px;
+  border: 1px solid #c1c1c1;
+  border-radius: 18px;
+  background-color: #f0f0fb;
+}
+
+.property_highlight_text {
+  font-size: 14px;
+  font-weight: 500;
+}
+.property_view_btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border: 0 none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #703bf7;
+  color: #fff;
+}
+
+@media (min-width: 1080px) {
+  .hero_container {
+    padding: 100px 80px;
+    margin-top: 0 !important;
+  }
+  .featured_text_heading {
+    font-size: 38px;
+  }
+  .featured_text_paragraph {
+    font-size: 16px;
+  }
+  .property_card {
+    margin-top: 60px;
+    padding: 30px;
+  }
+  .property_text_container {
+    margin-top: 20px;
+  }
+}

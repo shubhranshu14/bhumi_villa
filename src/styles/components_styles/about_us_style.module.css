@@ -216,3 +216,107 @@
     font-size: 16px;
   }
 }
+
+/* achivement container */
+
+.achivement_list_container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+.achivement_container {
+  padding: 30px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 10px#e2e2e2;
+  border-radius: 12px;
+}
+.achivement_heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.achivement_paragraph {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9a9a9a;
+}
+
+@media (min-width: 1080px) {
+  .achivement_list_container {
+    margin-top: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .achivement_container {
+    padding: 40px;
+    flex: 1;
+  }
+  .achivement_heading {
+    font-size: 24px;
+  }
+
+  .achivement_paragraph {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+}
+
+/*  Navigating the Estatein Experience Container */
+
+.steps_list_container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+.step_number_container {
+  padding: 14px 16px;
+  border-left: 1px solid #703bf7;
+}
+.step_number {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.step_body {
+  padding: 30px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(145deg, #703bf7 0%, rgba(112, 59, 247, 0) 36%);
+  border-image-slice: 1;
+  border-radius: 0 12px 12px 12px;
+  box-shadow: 1px 0 10px #e2e2e2;
+}
+.step_body_heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+.step_body_paragraph {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9a9a9a;
+  text-align: justify;
+}
+
+@media (min-width: 1080px) {
+  .steps_list_container {
+    margin-top: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+
+  .step_body {
+    padding: 40px;
+    min-height: 222px;
+  }
+  .step_body_heading {
+    font-size: 20px;
+  }
+  .step_body_paragraph {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}

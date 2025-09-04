@@ -5,16 +5,57 @@
   position: sticky;
   top: 0;
   z-index: 9;
-  padding: 20px 16px;
+  padding: 6px 16px;
   align-items: center;
   justify-content: space-between;
   background-color: #f0f0fb;
 }
 
 .logo_container {
-  width: 94px;
+  width: 60px;
 }
 
 .logo {
   width: 100%;
+}
+
+.desk_link_container {
+  display: none;
+}
+
+@media (min-width: 1080px) {
+  .active {
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+  }
+
+  .navbar_container {
+    justify-content: space-around;
+    padding: 6px 0;
+  }
+
+  .logo_container {
+    width: 80px;
+    cursor: pointer;
+  }
+  .desk_link_container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .desk_link_container p {
+    cursor: pointer;
+    padding: 16px 24px;
+  }
+
+  .hideForDesk {
+    display: none !important;
+  }
+  .contact_btn {
+    padding: 16px 24px;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    cursor: pointer;
+  }
 }

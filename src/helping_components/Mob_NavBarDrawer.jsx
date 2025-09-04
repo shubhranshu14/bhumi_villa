@@ -41,7 +41,7 @@ export default function MobNavBarDrawer({ open, setOpen }) {
                         <ListItemText primary='About Us' />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding onClick={() => handleNavigate('/properties')}>
+                <ListItem disablePadding onClick={() => handleNavigate('/property')}>
                     <ListItemButton>
                         <ListItemIcon>
                             <Villa />
